@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch AI | Smart Movie Recommendations</title>
+    <meta name="description" content="AI-powered movie recommendation system using content-based filtering and collaborative filtering algorithms. B.Tech CSE AI/ML project.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="gradient-bg text-gray-100 min-h-screen">
+    <header class="glass-effect sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-film text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CineMatch AI</h1>
+                        <p class="text-xs text-gray-400">Intelligent Movie Recommendations</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 items-center">
+                    <button id="btn-home" class="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition flex items-center space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </button>
+                    <button id="btn-recommend" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition flex items-center space-x-2">
+                        <i class="fas fa-robot"></i>
+                        <span>Get Recommendations</span>
+                    </button>
+                    <button id="btn-analytics" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 transition flex items-center space-x-2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                AI-Powered Movie 
+                <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Recommendations</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Content-based filtering using TF-IDF & Cosine Similarity. 
+                <span class="text-emerald-300 font-medium">B.Tech CSE AI/ML Project</span>
+            </p>
+            
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" 
+                           id="search-input"
+                           placeholder="Search movie title (e.g. Avatar, Titanic)..."
+                           class="w-full px-6 py-4 rounded-xl glass-effect border border-gray-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/30"
+                    >
+                    <button id="btn-search" class="absolute right-3 top-3 px-6 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg hover:opacity-90 transition">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-3">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">
+                        <i class="fas fa-robot text-purple-400 mr-2"></i>
+                        Smart Recommendations
+                    </h3>
+                </div>
+
+                <div id="movie-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Dynamic recommendations yahan load hongi -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-12 py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>© 2026 CineMatch AI. B.Tech CSE AI/ML Project.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
